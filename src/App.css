@@ -1,0 +1,11 @@
+.app{
+    width: 80%;
+    margin: 50px auto 0 auto;
+}
+.options{
+    display: flex;
+    gap: 50px;
+}
+.sliders{
+    margin: 15px 10px;
+}
