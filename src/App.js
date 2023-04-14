@@ -48,15 +48,15 @@ function App() {
                 options={options} 
                 value={value} 
                 material={material}
-                onChange={(newValue) => {setValue(newValue)}} 
-                onInputChange={(newInputValue) => {setMaterial(newInputValue)}}
+                onChange={(newValue) => {setValue(newValue ? newValue.target.textContent : '')}} 
+                onInputChange={(newInputValue) => {setMaterial(newInputValue ? newInputValue.target.textContent : '')}}
             />
             <Filter 
                 options={['Метал', 'Пластик', '']} 
                 value={filters.material} 
                 label={'Вид материала'} 
-                onChange={(newValue) => {setFilters(newValue ? newValue : '')}} 
-                onInputChange={(newInputValue) => {setFilters(newInputValue ? newInputValue : '')}}
+                onChange={(newValue) => {setFilters(newValue ? newValue.target.textContent : '')}} 
+                onInputChange={(newInputValue) => {setFilters(newInputValue ? newInputValue.target.textContent : '')}}
             />
         </div>
         <div className='sliders'>
